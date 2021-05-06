@@ -61,8 +61,8 @@ all: main-build
 main-build: Week7GPIO.elf secondary-outputs
 
 # Tool invocations
-Week7GPIO.elf: $(OBJS) $(USER_OBJS) D:\GitHub\week07_QEI_62340500031\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Week7GPIO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GitHub\week07_QEI_62340500031\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Week7GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Week7GPIO.elf: $(OBJS) $(USER_OBJS) C:\GitHub\week07_QEI_62340500031\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Week7GPIO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\GitHub\week07_QEI_62340500031\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Week7GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
