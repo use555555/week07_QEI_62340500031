@@ -53,7 +53,7 @@ uint64_t TimeOutputLoop = 0;
 
 float EncoderVel = 0;
 float MotorVel = 0;
-float InputMotorVel = 0;
+float InputMotorVel = 15;
 float InputEncoderVel = 0;
 
 float error = 0;
