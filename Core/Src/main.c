@@ -152,6 +152,14 @@ int main(void)
 			  Integral += error * dt;
 			  PIDPWM = (Kp*error) + (Ki*Integral) + (Kd * ((error-pre_error)/dt));
 		  }
+		  if(PIDPWM>=10000)
+		  {
+			  PIDPWM = 10000;
+		  }
+		  else if(PIDPWM <= -10000)
+		  {
+			  PIDPWM = -10000;
+		  }
 		  pre_error = error;
 
 		  if(InputMotorVel > 0)
